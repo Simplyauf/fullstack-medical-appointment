@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import { FaRegCalendarAlt, FaPhoneAlt } from "react-icons/fa";
 
-const AppointmentCard = ({img,name,role,date,action}) => {
+const AppointmentCard = ({ img, name, role, date, action }) => {
   return (
     <div>
-      <div className="flex flex-row bg-white px-[0.5cm] pt-[1rem] items-center pb-[1rem]">
+      <div className="flex flex-row bg-white px-[0.5cm] pt-[1rem] items-center pb-[1rem] md:rounded-[10px]">
         <div className="flex flex-row gap-[1rem] items-center">
           <div className="w-[1.9cm] h-[1.9cm] ">
             <img
@@ -14,12 +14,8 @@ const AppointmentCard = ({img,name,role,date,action}) => {
             />
           </div>
           <div className="flex flex-col">
-            <p className="font-semibold text-[0.9rem] text-dark">
-             {name}
-            </p>
-            <p className="text-secondary text-[0.75rem] mt-[0.3rem]">
-              {role}
-            </p>
+            <p className="font-semibold text-[0.9rem] text-dark">{name}</p>
+            <p className="text-secondary text-[0.75rem] mt-[0.3rem]">{role}</p>
             <div className="flex flex-row mt-[0.8rem] items-center gap-[0.2cm]">
               <FaRegCalendarAlt className="text-primary text-[0.7rem]" />
               <p className="text-secondary text-[0.7rem]">{date}</p>
@@ -36,7 +32,7 @@ const AppointmentCard = ({img,name,role,date,action}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AppointmentCard
+export default AppointmentCard;

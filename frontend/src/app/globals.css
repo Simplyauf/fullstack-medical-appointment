@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +10,7 @@ button {
 }
 
 body {
-  @apply font-karla overflow-x-hidden min-h-screen;
+  @apply font-karla  bg-light overflow-x-hidden min-h-screen;
 }
 
 h1,

@@ -66,7 +66,7 @@ const BottomNav = () => {
     router.push(`${route}`);
   };
   return (
-    <div className="px-4 fixed bottom-[1rem] mx-auto flex justify-center items-center w-full  z-[1000]">
+    <div className="px-4 fixed bottom-[1rem] mx-auto md:w-[calc(100%-270px)] flex justify-center md:right-0 items-center w-full  z-[1000]">
       <div className="flex flex-row items-center justify-between  shadow-normal bg-white px-4 sm:px-[2rem]  mt-[2rem] w-full max-w-[90%] sm:max-w-[500px] rounded-[10px]">
         {tabs.map((tab, index) => {
           const route = tab.route;

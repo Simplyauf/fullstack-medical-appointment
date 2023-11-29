@@ -45,7 +45,7 @@ const Header = () => {
         <div className=" bg-white shadow-normal  w-[35px] h-[35px] rounded-full flex items-center justify-center">
           <LiaVideoSolid className="text-primary  cursor-pointer" />
         </div>
-        <div className=" bg-white shadow-normal  w-[35px] h-[35px] rounded-full flex items-center justify-center">
+        <div className=" bg-white shadow-normal  w-[35px] h-[35px] rounded-full flex items-center justify-center md:hidden">
           <LiaBarsSolid className="text-dark cursor-pointer" />
         </div>
       </div>

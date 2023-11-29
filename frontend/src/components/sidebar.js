@@ -106,13 +106,13 @@ const Dashboard = ({ openSideBar, closeSideBar }) => {
   };
   return (
     <section
-      className={`fixed z-[2000] md:w-0  min-w-[100vw] top-0 h-[100vh] bg-black/20 transition-all ease-out md:bg-transparent  md:min-w-fit   ${
+      className={`fixed z-[2000]  md:w-0  min-w-[100vw] top-0 h-[100vh] bg-black/20 transition-all ease-out md:bg-transparent  md:min-w-fit   ${
         openSideBar ? "translate-x-0" : "translate-x-[-100%] md:translate-x-0"
       }`}
     >
       <div
         ref={wrapperRef}
-        className="fixed bg-white bottom-0 border-r border-l-black w-[270px] h-screen "
+        className="fixed bg-white bottom-0 border-r md:border-b border-r-bs border-b-bs w-[270px] h-screen md:h-[700px] md:top-0"
       >
         <div className="flex flex-row gap-[1rem] px-4 py-[14px] w-full pl-4 bg-primary">
           <Link href="/dasboard/Profile">
@@ -131,7 +131,7 @@ const Dashboard = ({ openSideBar, closeSideBar }) => {
             <p className="text-small text-white/50">+234 8149 660 220</p>
           </div>
         </div>
-        <ul className="flex flex-col">
+        <ul className="flex flex-col mt-10">
           {sideItems.map((item, index) => {
             const { icon, name, route } = item;
             return (
@@ -144,7 +144,7 @@ const Dashboard = ({ openSideBar, closeSideBar }) => {
                   onClick={() => navigateToPage(route)}
                 >
                   {icon("")}
-                  <span className="text-[13px] text-[#343a40] bg-transparent ">
+                  <span className="text-[13px] md:text-[14px] text-[#343a40] bg-transparent ">
                     {name}
                   </span>
                 </div>

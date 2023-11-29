@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import BottomNav from "@components/BottomNav";
+import ReduxProvider from "@/src/redux/ReduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,9 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-
+      <body>
+        <ReduxProvider>{children}</ReduxProvider>
         <BottomNav />
       </body>
     </html>

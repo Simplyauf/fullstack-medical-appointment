@@ -26,7 +26,6 @@ import { setOpenSideBar } from "@/src/redux/slices/App";
 const Home = () => {
   const dispatch = useDispatch();
   const { openSideBar } = useSelector((state) => state.App);
-  //w-[90vw] md:w-[75vw] lg:w-[83vw]
 
   const ToggleSideBar = () => {
     dispatch(setOpenSideBar(!openSideBar));
@@ -41,10 +40,10 @@ const Home = () => {
         <Header ToggleSideBar={ToggleSideBar} />
 
         {/* The rest of the components in the homepage*/}
-        <main className="w-full bg-light pt-4 pb-[120px] ">
+        <main className="w-full bg-light pt-4 pb-[120px] md:pb-[160px] md:px-[calc(5%-16px)]">
           <BookAppointmentCards />
-          <section className="grid grid-cols-4 w-full max-w-[420px] px-4 mt-2 my-4 gap-2 mx-auto">
-            <article className="rounded-[10px] h-[90px] flex flex-col items-center justify-center gap-3 shadow-small p-2 bg-white">
+          <section className="grid grid-cols-4 w-full  px-4 mt-2 my-4 sm:my-8 md:gap-4 lg:my-10 gap-2 ">
+            <article className="rounded-[10px] h-[90px] sm:h-[172px] flex flex-col items-center justify-center gap-3 shadow-small p-2 bg-white">
               <Image
                 src={DoctorImg}
                 width={45}
@@ -55,7 +54,7 @@ const Home = () => {
                 Doctor
               </p>
             </article>
-            <article className="rounded-[10px] h-[90px] flex flex-col items-center justify-center gap-3 shadow-small p-2 bg-white">
+            <article className="rounded-[10px] h-[90px] sm:h-[172px] flex flex-col items-center justify-center gap-3 shadow-small p-2 bg-white">
               <Image
                 src={ScheduleImg}
                 width={45}
@@ -66,7 +65,7 @@ const Home = () => {
                 Appointment
               </p>
             </article>
-            <article className="rounded-[10px] h-[90px] flex flex-col items-center justify-center gap-3 p-2 shadow-small bg-white ">
+            <article className="rounded-[10px] h-[90px] sm:h-[172px] flex flex-col items-center justify-center gap-3 p-2 shadow-small bg-white ">
               <Image
                 width={45}
                 height={45}
@@ -77,7 +76,7 @@ const Home = () => {
                 Prescription
               </p>
             </article>
-            <article className="rounded-[10px] h-[90px] flex flex-col items-center justify-center gap-3 shadow-small p-2 bg-white text-black">
+            <article className="rounded-[10px] h-[90px] sm:h-[172px] flex flex-col items-center justify-center gap-3 shadow-small p-2 bg-white text-black">
               <Image
                 src={MedicineImg}
                 width={45}
@@ -93,7 +92,7 @@ const Home = () => {
           <section className="w-full mt-2">
             <h3 className="font-bold px-4 mb-3">Top Doctors</h3>
             <div className="w-full flex items-start flex-nowrap overflow-y-hidden overflow-x-auto horizontal-overflow px-4 gap-3">
-              <article className="flex flex-col min-w-[152px]  w-[152px] h-[161px] rounded-[10px] shadow-small bg-white">
+              <article className="flex flex-col min-w-[152px]  w-[152px] h-[161px] md:w-[180px] md:h-[188px]  rounded-[10px] shadow-small bg-white">
                 <Image
                   src={TopDoctor1}
                   width={0}
@@ -102,13 +101,15 @@ const Home = () => {
                   className="min-w-full rounded-t-[10px]"
                 />
                 <div className="p-3">
-                  <h3 className="overflow-hidden overflow-ellipsis line-clamp-1 w-full text-[14px] font-semibold ">
+                  <h3 className="overflow-hidden overflow-ellipsis line-clamp-1 w-full text-[14px] md:text-[16px] font-semibold ">
                     Dr. Taylor Samaro
                   </h3>
-                  <p className="text-small text-secondary">Dental Sargon</p>
+                  <p className="text-small text-secondary md:text-[13px] md:mt-1">
+                    Dental Sargon
+                  </p>
                 </div>
               </article>
-              <article className="flex flex-col min-w-[152px]  w-[152px] h-[161px] rounded-[10px] shadow-small bg-white">
+              <article className="flex flex-col min-w-[152px]  w-[152px] h-[161px] md:w-[180px] md:h-[188px]  rounded-[10px] shadow-small bg-white">
                 <Image
                   src={TopDoctor3}
                   width={0}
@@ -117,13 +118,15 @@ const Home = () => {
                   className="min-w-full rounded-t-[10px]"
                 />
                 <div className="p-3">
-                  <h3 className="overflow-hidden overflow-ellipsis line-clamp-1 w-full text-[14px] font-semibold ">
+                  <h3 className="overflow-hidden overflow-ellipsis line-clamp-1 w-full text-[14px] md:text-[16px] font-semibold ">
                     Dr. Taylor Samaro
                   </h3>
-                  <p className="text-small text-secondary">Dental Sargon</p>
+                  <p className="text-small text-secondary md:text-[13px] md:mt-1">
+                    Dental Sargon
+                  </p>
                 </div>
               </article>
-              <article className="flex flex-col min-w-[152px]  w-[152px] h-[161px] rounded-[10px] shadow-small bg-white">
+              <article className="flex flex-col min-w-[152px]  w-[152px] h-[161px] md:w-[180px] md:h-[188px]  rounded-[10px] shadow-small bg-white">
                 <Image
                   src={TopDoctor2}
                   width={0}
@@ -132,13 +135,15 @@ const Home = () => {
                   className="min-w-full rounded-t-[10px]"
                 />
                 <div className="p-3">
-                  <h3 className="overflow-hidden overflow-ellipsis line-clamp-1 w-full text-[14px] font-semibold ">
+                  <h3 className="overflow-hidden overflow-ellipsis line-clamp-1 w-full text-[14px] md:text-[16px] font-semibold ">
                     Dr. Taylor Samaro
                   </h3>
-                  <p className="text-small text-secondary">Dental Sargon</p>
+                  <p className="text-small text-secondary md:text-[13px] md:mt-1">
+                    Dental Sargon
+                  </p>
                 </div>
               </article>
-              <article className="flex flex-col min-w-[152px]  w-[152px] h-[161px] rounded-[10px] shadow-small bg-white">
+              <article className="flex flex-col min-w-[152px]  w-[152px] h-[161px] md:w-[180px] md:h-[188px]  rounded-[10px] shadow-small bg-white">
                 <Image
                   src={TopDoctor1}
                   width={0}
@@ -147,10 +152,12 @@ const Home = () => {
                   className="min-w-full rounded-t-[10px]"
                 />
                 <div className="p-3">
-                  <h3 className="overflow-hidden overflow-ellipsis line-clamp-1 w-full text-[14px] font-semibold ">
+                  <h3 className="overflow-hidden overflow-ellipsis line-clamp-1 w-full text-[14px] md:text-[16px] font-semibold ">
                     Dr. Taylor Samaro
                   </h3>
-                  <p className="text-small text-secondary">Dental Sargon</p>
+                  <p className="text-small text-secondary md:text-[13px] md:mt-1">
+                    Dental Sargon
+                  </p>
                 </div>
               </article>
             </div>

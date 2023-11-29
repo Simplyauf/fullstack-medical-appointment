@@ -9,7 +9,7 @@ import ProfileImg from "@/public/Images/profilepic1.jpg";
 
 const Header = ({ ToggleSideBar }) => {
   return (
-    <div className=" px-[0.5cm] sticky md:static top-0 shadow-small py-[1rem] z-[10] bg-white w-full">
+    <div className=" px-[16px] sticky  md:pl-[5%] top-0 shadow-small py-[1rem] z-[10] bg-white w-full">
       <div className="flex flex-row items-center justify-between w-full">
         <div className="flex flex-row gap-[1rem] w-[50%]">
           <Link href="/dashboard/profile">
@@ -32,11 +32,14 @@ const Header = ({ ToggleSideBar }) => {
           <div className="outline outline-1 outline-gray-200 w-[2rem] h-[2rem] rounded-full flex items-center justify-center shadow-normal">
             <BsHeart className="text-primary cursor-pointer" />
           </div>
-          <div className=" w-[2rem] h-[2rem] rounded-full flex items-center justify-center shadow-normal">
-            <BsBell className="text-primary cursor-pointer" />
-          </div>
-          <div
+          <Link
+            href="/notifications"
             className=" w-[2rem] h-[2rem] rounded-full flex items-center justify-center shadow-normal"
+          >
+            <BsBell className="text-primary cursor-pointer" />
+          </Link>
+          <div
+            className=" w-[2rem] h-[2rem] rounded-full md:hidden flex items-center justify-center shadow-normal"
             onClick={ToggleSideBar}
           >
             <LiaBarsSolid className="text-primary cursor-pointer" />
@@ -44,7 +47,7 @@ const Header = ({ ToggleSideBar }) => {
         </div>
       </div>
       <div className="w-full bg-light h-[1.2cm] mt-[1rem]  rounded-[10px] flex flex-row px-4 py-1 items-center shadow-normal">
-        <BsSearch className="text-primary font-bold w-6 h-6 " />
+        <BsSearch className="text-primary font-bold w-4 h-4 " />
         <input
           type="text"
           placeholder="Find your suitable doctor!"
